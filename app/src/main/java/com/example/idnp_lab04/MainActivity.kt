@@ -69,10 +69,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, AdapterView.OnIt
 
     }
 
+
+
     fun fabClickHandler(){
 
         var intent: Intent = Intent(this, NewPatientActivity::class.java)
         startActivity(intent)
+
+
 
         Toast.makeText(this, "Esto es una prueba", Toast.LENGTH_SHORT).show()
     }

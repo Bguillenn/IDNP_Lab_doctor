@@ -8,4 +8,12 @@
     <string name="newpatient_title"><b>Registrar</b> nuevo paciente</string>
     <string name="newpatient_form_names">Nombres del paciente</string>
     <string name="newpatient_form_names_hint">Nombres</string>
+    <string name="newpatient_form_apepat_hint">Apellido Paterno</string>
+    <string name="newpatient_form_apemat_hint">Apellido Materno</string>
+    <string name="newpatient_form_dni_hint">DNI</string>
+    <string name="newpatient_form_fecnac_hint">Fecha de nacimiento</string>
+    <string name="newpatient_form_sexo">Sexo</string>
+    <string name="newpatient_form_masculino">Masculino</string>
+    <string name="newpatient_form_femenino">Femenino</string>
+    <string name="newpatient_form_direccion">Dirección</string>
 </resources>
