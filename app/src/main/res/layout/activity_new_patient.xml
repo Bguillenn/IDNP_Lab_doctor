@@ -54,10 +54,12 @@
             android:elevation="10dp">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/np_tit_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/colorWhite"
-                android:maxLines="1"/>
+                android:maxLines="1"
+                android:textColor="#000000" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -75,10 +77,12 @@
             android:elevation="10dp">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/np_tit_apePat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/colorWhite"
-                android:maxLines="1"/>
+                android:maxLines="1"
+                android:textColor="#000000" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -94,10 +98,12 @@
             android:elevation="10dp">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/np_tit_apeMat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/colorWhite"
-                android:maxLines="1"/>
+                android:maxLines="1"
+                android:textColor="#000000" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -113,10 +119,12 @@
             android:elevation="10dp">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/np_tit_dni"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/colorWhite"
-                android:maxLines="1"/>
+                android:maxLines="1"
+                android:textColor="#000000" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -132,10 +140,12 @@
             android:elevation="10dp">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/np_tit_direccion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/colorWhite"
-                android:maxLines="1"/>
+                android:maxLines="1"
+                android:textColor="#000000" />
 
         </com.google.android.material.textfield.TextInputLayout>
 

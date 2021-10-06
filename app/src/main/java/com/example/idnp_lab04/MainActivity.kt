@@ -11,13 +11,26 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import android.view.animation.AlphaAnimation
 
 import android.view.animation.Animation
-
-
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.activity.result.contract.ActivityResultContracts.*
+import com.example.idnp_lab04.NewPatientActivity.Companion.PATIENT
 
 
 class MainActivity : AppCompatActivity(), View.OnClickListener, AdapterView.OnItemClickListener {
 
     lateinit var items: ArrayList<String>
+
+    private val patientActivity = registerForActivityResult(StartActivityForResult()){ activityResult ->
+        val name = activityResult.data?.getStringExtra(PATIENT)
+        if (name != null) {
+            items.add(name)
+        }
+
+        var listView = findViewById<ListView>(R.id.lvPacientes)
+        var myAdapter = PatientAdapter(this, R.layout.list_view_patient_layout, items)
+        listView.adapter = myAdapter
+
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,22 +49,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, AdapterView.OnIt
         items.add("Karen")
         items.add("Cristian")
         items.add("Jhonatan")
-        items.add("Juan")
-        items.add("Pepe")
-        items.add("Renzo")
-        items.add("Carlos")
-        items.add("Brayan")
-        items.add("Karen")
-        items.add("Cristian")
-        items.add("Jhonatan")
-        items.add("Juan")
-        items.add("Pepe")
-        items.add("Renzo")
-        items.add("Carlos")
-        items.add("Brayan")
-        items.add("Karen")
-        items.add("Cristian")
-        items.add("Jhonatan")
+
 
         //Creamos nuestro adapter y lo establecemos
         var myAdapter = PatientAdapter(this, R.layout.list_view_patient_layout, items)
@@ -74,9 +72,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, AdapterView.OnIt
     fun fabClickHandler(){
 
         var intent: Intent = Intent(this, NewPatientActivity::class.java)
-        startActivity(intent)
-
-
+        patientActivity.launch(intent)
 
         Toast.makeText(this, "Esto es una prueba", Toast.LENGTH_SHORT).show()
     }
